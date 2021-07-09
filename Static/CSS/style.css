@@ -102,19 +102,22 @@ nav ul ul{
     display:none;
 }
 nav ul li:hover> ul{
-    display:block;
-    
+    display:block;   
 }
 nav ul ul li{
     width:300px;
-    background: #FF8C64;
+    background: #f17140;
     /* background: #8cdb14; */
     float: none;
     display:list-item;
     position:relative;
     font-size: 10px;  
     z-index:3;
-
+    opacity: 0.9;
+}
+nav ul ul li a.active{
+    color:#8cdb14;
+    text-decoration: underline;
 }
 #signin ul{
     padding:0;
@@ -163,4 +166,53 @@ nav ul ul li{
 .h-primary {
     font-size: 3.8rem;
     padding: 12px;
+}
+.record label {
+    display: inline-block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+    
+input,
+.record #appt{
+    padding : 3px 15px;
+    margin: 4px 4px;
+}
+.record label {
+    margin: .4rem 19px;
+}
+.record h2{
+    margin: 4px 19px;
+    padding: 4px 0px;
+}
+.record i{
+    background-color: black;
+    height: 40px;
+    width: 40px;
+}
+
+.loginform{
+    font-size: 20px;
+    position: relative;
+    margin: 10px 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+}
+.loginform .box{
+    border: 1px solid black;
+    height:500px;
+    width: 918px;
+}
+.loginform h1{
+    margin-left: 430px;
+    margin-top: 50px;
+    margin-bottom: 36px;
+}
+.form-check-input{
+    padding: 4px 2px;
+}
+.loginform .btn{
+    margin-left: 430px;
+    font-size: 20px;
+    padding: 5px 24px;
 }
