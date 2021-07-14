@@ -1,5 +1,5 @@
   
-        .container{ 
+        .imagecontainer{ 
             display: grid; 
             grid-gap: 1rem;
             /* grid-template-columns: 112px 112px 112px;  */
@@ -13,7 +13,7 @@
             /* background-color: rgb(245, 187, 101); */
             padding: 0px; 
         }
-        *{
+        /* *{
             background-color: azure;
-        }
+        } */
     
