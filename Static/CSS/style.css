@@ -106,7 +106,13 @@ body{
     height: 66px;
     width: 73px;
 }
-
+#home{
+    background-color: #212529;
+    color:#f8f9fa
+}
+.nosleepbox{
+    background-color: #212529;
+}
 /* nav ul {
   padding:0;
   margin:0;
@@ -191,7 +197,7 @@ nav ul ul li a.active{
     text-decoration: underline;
 } */ 
 
-/* #home {
+ /* #home {
     padding: 0px;
     height: 900px;
 } 
@@ -209,6 +215,11 @@ nav ul ul li a.active{
 .h-primary {
     font-size: 3.8rem;
     padding: 12px;
+} */
+.record{
+    background-color: #212529;
+    color:#f8f9fa;
+    height: 800px;
 }
 .record label {
     display: inline-block;
@@ -224,16 +235,16 @@ input,
     margin: .4rem 19px;
 }
 .record h2{
-    margin: 4px 19px;
+    margin: 0px 19px;
     padding: 4px 0px;
 }
 .record i{
     background-color: black;
     height: 40px;
     width: 40px;
-} */
+} 
 
-/* .loginform{
+ /* .loginform{
     font-size: 20px;
     position: relative;
     margin: 10px 10px;
@@ -258,4 +269,4 @@ input,
     margin-left: 430px;
     font-size: 20px;
     padding: 5px 24px;
-} */
+}  */
