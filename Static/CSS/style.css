@@ -215,4 +215,221 @@ input,
     margin-left: 430px;
     font-size: 20px;
     padding: 5px 24px;
+}body{
+    background: #dedede;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding:0;
+
+}
+.dropdown{
+    margin: 0 auto;
+}
+/* .container{
+    display:grid;
+    grid-column: auto;
+    
+} */
+ /* .box{
+    display:flex;
+    position: relative;
+    top:3px;
+    height:350px;
+    width:1200px;
+    margin: 41px 156px;
+    padding: 1px 0px;
+    border: 1px solid black;
+} 
+.box ul h1{
+    font-size: 35px;
+}
+.box ul li{
+    font-size: 20px;
+    color: black;
+}
+.box::before{ 
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    
+}
+.box{
+    transition-property:all;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+.box:hover{
+    cursor:pointer;
+    height: 365px;
+    width: 1215px;
+} */
+nav{
+    height:80px;
+    background: #2c3e50;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+#logo{
+    margin: 4px 6px;
+    display: inline-block;
+    padding: 0px 1px;
+}
+#logo img{
+    top: 0px;
+    left: 4px;
+    height: 70px;
+    width: 80px;
+}
+nav ul {
+  padding:0;
+  margin:0;
+  float:right;
+  margin-right: 534px;
+}
+
+nav ul li {
+    background: #2c3e50;
+    position:relative;
+    list-style: none;
+    display : inline-block;
+}
+
+nav ul li a {
+    display:block;
+    color: white;
+    padding: 0px 16px;
+    text-decoration: none;
+    line-height: 80px;   
+    font-size: 20px;   
+    
+}
+
+nav ul li a:hover {
+    background-color: #243342;
+    color:#8cdb14 ;
+}
+nav ul li a.active{
+    color:#8cdb14;
+    text-decoration: underline;
+}
+nav ul ul{
+    position:absolute;
+    top:80px;
+    display:none;
+}
+nav ul li:hover> ul{
+    display:block;   
+}
+nav ul ul li{
+    width:300px;
+    background: #f17140;
+    /* background: #8cdb14; */
+    float: none;
+    display:list-item;
+    position:relative;
+    font-size: 10px;  
+    z-index:3;
+    opacity: 0.9;
+}
+nav ul ul li a.active{
+    color:#8cdb14;
+    text-decoration: underline;
+}
+#signin ul{
+    padding:0;
+    margin:0;
+    position:absolute;
+    right: 0px;
+    top:1px;
+}
+#signin ul li{
+    position:relative;
+    list-style: none;
+    display : inline-block;
+}
+#signin ul li a{
+    display:block;
+    color: white;
+    padding: 0px 19px;
+    text-decoration: none;
+    line-height: 80px;   
+    font-size: 20px; 
+}
+#signin ul li a:hover {
+    background-color: #243342;
+    color:#8cdb14 ;
+}
+#signin ul li a.active{
+    color:#8cdb14;
+    text-decoration: underline;
+}
+
+#home {
+    padding: 0px;
+    height: 900px;
+} 
+
+#home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background-image: url('../img/girl-1733352_1920.jpg');
+}
+
+.h-primary {
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.record label {
+    display: inline-block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+    
+input,
+.record #appt{
+    padding : 3px 15px;
+    margin: 4px 4px;
+}
+.record label {
+    margin: .4rem 19px;
+}
+.record h2{
+    margin: 4px 19px;
+    padding: 4px 0px;
+}
+.record i{
+    background-color: black;
+    height: 40px;
+    width: 40px;
+}
+
+.loginform{
+    font-size: 20px;
+    position: relative;
+    margin: 10px 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+}
+.loginform .box{
+    border: 1px solid black;
+    height:500px;
+    width: 918px;
+}
+.loginform h1{
+    margin-left: 430px;
+    margin-top: 50px;
+    margin-bottom: 36px;
+}
+.form-check-input{
+    padding: 4px 2px;
+}
+.loginform .btn{
+    margin-left: 430px;
+    font-size: 20px;
+    padding: 5px 24px;
 }
