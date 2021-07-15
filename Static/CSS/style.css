@@ -57,7 +57,7 @@ body{
     display:flex;
     position: relative;
     top:3px;
-    height:350px;
+    /* height:350px
     width:1200px;
     margin: 41px 156px;
     padding: 1px 0px;
