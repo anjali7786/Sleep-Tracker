@@ -1,0 +1,17 @@
+.sign{
+    display: flex;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* border: 2px solid black; */
+  font-family:  'Eczar', serif;
+  text-shadow: 0px 0px 2px green;
+}
+.abc{
+    font-size: 20px;
+    border: 2px solid black;
+}
+.btn{
+    margin-left: 10px;
+}
