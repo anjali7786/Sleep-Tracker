@@ -1,66 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="..\Static\css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Benne&family=Roboto+Condensed:ital@1&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <div id="logo">
-        <img src="../Images/Logo (2).png" alt="TrackNap.com">
-    </div>
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-          <li class="nav-item">
-            <a class="nav-link active text-decoration-underline fs-5 fw-normal" aria-current="page" href="sleeptracker.html">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fs-5 fw-normal" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Track Your Sleep
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item fs-5 fw-normal" href="records.html">Records</a></li>
-              <li><a class="dropdown-item fs-5 fw-normal" href="#">Analyse Your Sleep</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-5 fw-normal" href="unabletosleep.html">Unable To Sleep</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-5 fw-normal" href="boostyourself.html">Boost Yourself</a>
-          </li>
-         </ul>
-        
-        <form class="d-flex mx-2">
-          <a href="signup.html" class="btn btn-outline-light mx-2 fs-5 " tabindex="-1" role="button" aria-disabled="true">Sign Up</a>
-          <a href="login.html" class="btn btn-outline-light mx-2 fs-5" tabindex="-1" role="button" aria-disabled="true">Login</a>
-          <!-- <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a> -->
-          <!-- <button type="button" class="btn btn-outline-light mx-2">Sign Up</button>
-          <button type="button" class="btn btn-outline-light mx-2">Login</button> -->
-        </form>
-      </div>
-    </div>
-  </nav>
-
+{% extends "layout.html" %} {% block body %}
 
     <!-- <div class="dropdown">
         <nav>
@@ -95,19 +33,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="journal.jpg" class="d-block w-100" alt="...">
+                <img src="{{url_for('static' , filename ='../Static/Images/home_img/journal.jpg') }}" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="get_good_sleep.jpg" class="d-block  w-100" alt="...">
+                <img src="{{url_for('static' , filename ='../Static/Images/home_img/get_good_sleep.jpg') }}" class="d-block  w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="alarm_hand.jpg" class="d-block  w-100" alt="...">
+                <img src="{{url_for('static' , filename ='../Static/Images/home_img/alarm_hand.jpg') }}" class="d-block  w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="time_precious.jpg" class="d-block  w-100" alt="...">
+                <img src="{{url_for('static' , filename ='../Static/Images/home_img/time_precious.jpg')}}" class="d-block  w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="hourglass.jpg" class="d-block  w-100" alt="...">
+                <img src="{{url_for('static' , filename ='../Static/Images/home_img/hourglass.jpg') }}" class="d-block  w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -140,7 +78,7 @@
 
             </div>
             <div class="col-md-5">
-                <img class="bd-placeholder-img img-fluid" width="500" height="300" src="in-the-morning-4652076_1920.jpg" alt="..">
+                <img class="bd-placeholder-img img-fluid" width="500" height="300" src="{{url_for('static' , filename ='../Static/Images/home_img/in-the-morning-4652076_1920.jpg')}}" alt="..">
             </div>
         </div>
         <div class="row featurette d-flex justify-content-center">
@@ -165,7 +103,7 @@
                 </ul>
             </div>
             <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img img-fluid" width="500" height="300" src="sleepinggirl.jpg" alt="..">
+                <img class="bd-placeholder-img img-fluid" width="500" height="300" src="../Static/Images/home_img/sleepinggirl.jpg" alt="..">
             </div>
             <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -240,9 +178,5 @@
             <div class="box">Boost yourself</div>
         </div>  -->
     </section> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
-</body>
-
-</html>
+    {% endblock %}
+    

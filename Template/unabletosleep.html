@@ -1,70 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="stylesheet" href="..\Static\css/style.css" />
-  <link rel="stylesheet" href="..\Static\css/unabletosleep.css" />
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-
-  <title>UnableToSleep - TrackNap</title>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <div id="logo">
-        <img src="../Images/Logo (2).png" alt="TrackNap.com">
-      </div>
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link fs-5" href="sleeptracker.html">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Track Your Sleep
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item fs-5" href="records.html">Records</a></li>
-              <li><a class="dropdown-item fs-5" href="#">Analyse Your Sleep</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-decoration-underline fs-5" aria-current="page"
-              href="unabletosleep.html">Unable To Sleep</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-5" href="boostyourself.html">Boost Yourself</a>
-          </li>
-        </ul>
-
-        <form class="d-flex mx-2">
-          <a href="signup.html" class="btn btn-outline-light mx-2 fs-5 " tabindex="-1" role="button"
-            aria-disabled="true">Sign Up</a>
-          <a href="login.html" class="btn btn-outline-light mx-2 fs-5" tabindex="-1" role="button"
-            aria-disabled="true">Login</a>
-        </form>
-      </div>
-    </div>
-  </nav>
+{% extends "layout.html" %} {% block body %}
 
 
-  <!-- <div class="dropdown">
+    <!-- <div class="dropdown">
         <nav>
             <div id="logo">
                 <img src="Logo.png" alt="TrackNap.com">
@@ -89,87 +26,86 @@
         </div>
     </div> -->
 
-  <div class="nosleepbox">
+    <div class="nosleepbox">
+      <br />
+      <div class="card box">
+        <a href="yoga.html" target="_blank"
+          ><img
+            src="{{ url_for('static' , filename = '../Static/Images/yoga_img/1.jfif') }}"
+            alt=""
+          />
+          <div class="card-img-overlay content">
+            <h3 class="card-title">Yoga</h3>
+            <p class="card-text">
+              Treat your Insomnia with Yoga. Follow these six Yoga asanas and
+              feel the change in your body as well as sleep.<br />
+              • Uttanasana <br />
+              • Halasana <br />
+              • Shishuasana <br />
+              • Viparita Karani <br />
+              • Savasana <br />• Supta Baddha Konasana
+            </p>
+            <p class="card-text">For more information , click here.</p>
+          </div>
+        </a>
+      </div>
+      <br />
+      <div class="card box">
+        <a href="#" target="_blank">
+          <img
+            src="{{ url_for('static' , filename = '../Static/Images/yoga_img/15.jpg') }}"
+            alt=""
+          />
+          <div class="card-img-overlay content">
+            <h3 class="card-title">Meditation</h3>
+            <p class="card-text">
+              • Feeling stressed about anything? Just meditate.  <br />
+              • If something is bothering you and you are unable to sleep,
+              meditate for 10-15 mins and you will feel relaxed. It wull help
+              you get rid of all kind of unwanted stuff out of your mind.
+              <br /> • Meditation controls anxiety.<br />
+               • It enhances concentration power, memory and attention span.
+            </p>
+            <p class="card-text">For more information , click here.</p>
+          </div>
+        </a>
+      </div>
+      <br />
+      <div class="card box">
+        <a href="#" target="_blank">
+          <img
+            src="{{ url_for('static' , filename = '../Static/Images/yoga_img/13.jfif') }}"
+            alt=""
+          />
+          <div class="card-img-overlay content">
+            <h3 class="card-title">Food and Habits</h3>
+            <p class="card-text">
+              • Don't drink any caffeinated beverages (like soda or iced tea)
+              after about 3:00 in the afternoon. <br /> • Green, leafy
+              vegetables, pumpkin seeds, bananas, avocados, beans, and nuts and
+              seeds are all foods rich in magnesium, which helps muscles relax
+              and induces a sleepy state. <br />  • Moderate alcohol consumption
+              since it can throw off your sleep cycles even if it makes you
+              sleepy at first. <br />  • Try not to have your dinner too late so
+              that you aren’t still digesting at bedtime and are at less risk of
+              acid reflux. Be extra careful with spicy and oily foods late in
+              the evening.
+            </p>
+            <p class="card-text">For more information, click here.</p>
+          </div>
+        </a>
+      </div>
 
-    <br />
-    <div class="card box">
-      <a href="yoga.html" target="_blank"><img src="../images/yoga_img/1.jfif" alt="" />
-        <div class="card-img-overlay content">
-          <h3 class="card-title">Yoga</h3>
-          <p class="card-text">
-            Treat your Insomnia with Yoga. Follow these six Yoga asanas and feel the change in your body as well as
-            sleep.<br>
-            • Uttanasana <br> • Halasana <br> • Shishuasana <br> • Viparita Karani <br> • Savasana <br>• Supta Baddha
-            Konasana
-
-          </p>
-          <p class="card-text">For more information , click here.</p>
-        </div>
-      </a>
+      <footer class="blog-footer">
+        <p>
+          Blog template built for
+          <a href="https://getbootstrap.com/">Bootstrap</a> by
+          <a href="https://twitter.com/mdo">@mdo</a>.
+        </p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
     </div>
-    <br />
-    <div class="card box">
-      <a href="#" target="_blank">
-        <img src="../images/yoga_img/15.jpg" alt="" />
-        <div class="card-img-overlay content">
-          <h3 class="card-title">Meditation</h3>
-          <p class="card-text">
-            • Feeling stressed about anything? Just meditate.  <br> • If something
-            is bothering you and you are unable to sleep, meditate for 10-15
-            mins and you will feel relaxed. It wull help you get rid of all kind
-            of unwanted stuff out of your mind. <br> • Meditation controls anxiety.<br>
-             • It enhances concentration power, memory and attention span.
-          </p>
-          <p class="card-text">For more information , click here.</p>
-        </div>
-      </a>
-    </div>
-    <br />
-    <div class="card box">
-      <a href="#" target="_blank">
-        <img src="../images/yoga_img/13.jfif" alt="" />
-        <div class="card-img-overlay content">
-          <h3 class="card-title">Food and Habits</h3>
-          <p class="card-text">
-            • Don't drink any caffeinated beverages (like soda or iced tea)
-            after about 3:00 in the afternoon. <br> • Green, leafy vegetables,
-            pumpkin seeds, bananas, avocados, beans, and nuts and seeds are all
-            foods rich in magnesium, which helps muscles relax and induces a
-            sleepy state. <br>  • Moderate alcohol consumption since it can throw
-            off your sleep cycles even if it makes you sleepy at first. <br>  • Try
-            not to have your dinner too late so that you aren’t still digesting
-            at bedtime and are at less risk of acid reflux. Be extra careful
-            with spicy and oily foods late in the evening.
-          </p>
-          <p class="card-text">For more information, click here.</p>
-        </div>
-      </a>
-    </div>
-
-    <footer class="blog-footer">
-      <p>
-        Blog template built for
-        <a href="https://getbootstrap.com/">Bootstrap</a> by
-        <a href="https://twitter.com/mdo">@mdo</a>.
-      </p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-  </div>
-
-  <!-- Optional JavaScript; choose one of the two! -->
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-</body>
-
-</html>
+    {% endblock %}
+    
