@@ -1,9 +1,17 @@
-from flask import Flask , render_template
+from flask import Flask , render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__ , template_folder= 'Template' , static_folder='Static')
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/records'
-# db = SQLAlchemy(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/tracknap'
+db = SQLAlchemy(app)
+
+class Login(db.Model):
+    Sno = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    age = db.Column(db.Integer, nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+    password = db.Column(db.String(25), nullable=False)
+
 
 
 # class Day(db.Model):
@@ -30,8 +38,24 @@ def records():
 def login():
     return render_template('login.html')
 
-@app.route("/signup")
+@app.route("/signup", methods=["GET","POST"])
 def signup():
+    if(request.method =='POST'):
+        name = request.form.get('name')
+        age = request.form.get('age')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        cpassword = request.form.get('cpassword')
+
+        if(password==cpassword):
+            entry = Login(name=name , age=age ,email=email , password=password)
+            db.session.add(entry)
+            db.session.commit()
+            return render_template('sleeptracker.html')
+            
+        else:
+            return("incorrect password! please try again.")
+            
     return render_template('signup.html')
 
 @app.route("/unabletosleep")
