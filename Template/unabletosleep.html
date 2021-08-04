@@ -1,78 +1,120 @@
 {% extends "layout.html" %} {% block body %}
 
-    
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <div id="logo">
+      <img src="{{url_for('static' , filename ='../Static/Images/home_img/Logo (2).png') }}" alt="TrackNap.com" />
+    </div>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="nosleepbox">
-      <br />
-      <div class="card box">
-        <a href="/unabletosleep/yoga" target="_blank"
-          ><img
-            src="{{ url_for('static' , filename = '../Static/Images/yoga_img/1.jfif') }}"
-            alt=""
-          />
-          <div class="card-img-overlay content">
-            <h3 class="card-title">Yoga</h3>
-            <p class="card-text">
-              Treat your Insomnia with Yoga. Follow these six Yoga asanas and
-              feel the change in your body as well as sleep.<br />
-              • Uttanasana <br />
-              • Halasana <br />
-              • Shishuasana <br />
-              • Viparita Karani <br />
-              • Savasana <br />• Supta Baddha Konasana
-            </p>
-            <p class="card-text">For more information , click here.</p>
-          </div>
-        </a>
-      </div>
-      <br />
-      <div class="card box">
-        <a href="#" target="_blank">
-          <img
-            src="{{ url_for('static' , filename = '../Static/Images/yoga_img/15.jpg') }}"
-            alt=""
-          />
-          <div class="card-img-overlay content">
-            <h3 class="card-title">Meditation</h3>
-            <p class="card-text">
-              • Feeling stressed about anything? Just meditate.  <br />
-              • If something is bothering you and you are unable to sleep,
-              meditate for 10-15 mins and you will feel relaxed. It wull help
-              you get rid of all kind of unwanted stuff out of your mind.
-              <br /> • Meditation controls anxiety.<br />
-               • It enhances concentration power, memory and attention span.
-            </p>
-            <p class="card-text">For more information , click here.</p>
-          </div>
-        </a>
-      </div>
-      <br />
-      <div class="card box">
-        <a href="#" target="_blank">
-          <img
-            src="{{ url_for('static' , filename = '../Static/Images/yoga_img/13.jfif') }}"
-            alt=""
-          />
-          <div class="card-img-overlay content">
-            <h3 class="card-title">Food and Habits</h3>
-            <p class="card-text">
-              • Don't drink any caffeinated beverages (like soda or iced tea)
-              after about 3:00 in the afternoon. <br /> • Green, leafy
-              vegetables, pumpkin seeds, bananas, avocados, beans, and nuts and
-              seeds are all foods rich in magnesium, which helps muscles relax
-              and induces a sleepy state. <br />  • Moderate alcohol consumption
-              since it can throw off your sleep cycles even if it makes you
-              sleepy at first. <br />  • Try not to have your dinner too late so
-              that you aren’t still digesting at bedtime and are at less risk of
-              acid reflux. Be extra careful with spicy and oily foods late in
-              the evening.
-            </p>
-            <p class="card-text">For more information, click here.</p>
-          </div>
-        </a>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-normal" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5 fw-normal" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Track Your Sleep
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item fs-5 fw-normal" href="/records">Records</a>
+            </li>
+            <li>
+              <a class="dropdown-item fs-5 fw-normal" href="#">Analyse Your Sleep</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-decoration-underline fs-5 fw-normal" href="/unabletosleep"
+            aria-current="page">Unable To Sleep</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-normal" href="/boostyourself">Boost Yourself</a>
+        </li>
+      </ul>
 
-     
-          
-    {% endblock %}
-    
+      <form class="d-flex mx-2">
+        <a href="/signup" class="btn btn-outline-light mx-2 fs-5" tabindex="-1" role="button" aria-disabled="true">Sign
+          Up</a>
+        <a href="/login" class="btn btn-outline-light mx-2 fs-5" tabindex="-1" role="button"
+          aria-disabled="true">Login</a>
+        <!-- <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a> -->
+        <!-- <button type="button" class="btn btn-outline-light mx-2">Sign Up</button>
+      <button type="button" class="btn btn-outline-light mx-2">Login</button> -->
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="nosleepbox">
+  <br />
+  <div class="card box">
+    <a href="/unabletosleep/yoga" target="_blank"><img
+        src="{{ url_for('static' , filename = '../Static/Images/yoga_img/1.jfif') }}" alt="" />
+      <div class="card-img-overlay content">
+        <h3 class="card-title">Yoga</h3>
+        <p class="card-text">
+          Treat your Insomnia with Yoga. Follow these six Yoga asanas and
+          feel the change in your body as well as sleep.<br />
+          • Uttanasana <br />
+          • Halasana <br />
+          • Shishuasana <br />
+          • Viparita Karani <br />
+          • Savasana <br />• Supta Baddha Konasana
+        </p>
+        <p class="card-text">For more information , click here.</p>
+      </div>
+    </a>
+  </div>
+  <br />
+  <div class="card box">
+    <a href="#" target="_blank">
+      <img src="{{ url_for('static' , filename = '../Static/Images/yoga_img/meditate.jpg') }}" alt="" />
+      <div class="card-img-overlay content">
+        <h3 class="card-title">Meditation</h3>
+        <p class="card-text">
+          • Feeling stressed about anything? Just meditate.  <br />
+          • If something is bothering you and you are unable to sleep,
+          meditate for 10-15 mins and you will feel relaxed. It will help
+          you get rid of all kind of unwanted stuff out of your mind.
+          <br /> • Meditation controls anxiety.<br />
+           • It enhances concentration power, memory and attention span.
+        </p>
+        <p class="card-text">For more information , click here.</p>
+      </div>
+    </a>
+  </div>
+  <br />
+  <div class="card box">
+    <a href="#" target="_blank">
+      <img src="{{ url_for('static' , filename = '../Static/Images/yoga_img/13.jfif') }}" alt="" />
+      <div class="card-img-overlay content">
+        <h3 class="card-title">Food and Habits</h3>
+        <p class="card-text">
+          • Don't drink any caffeinated beverages (like soda or iced tea)
+          after about 3:00 in the afternoon. <br /> • Green, leafy
+          vegetables, pumpkin seeds, bananas, avocados, beans, and nuts and
+          seeds are all foods rich in magnesium, which helps muscles relax
+          and induces a sleepy state. <br />  • Moderate alcohol consumption
+          since it can throw off your sleep cycles even if it makes you
+          sleepy at first. <br />  • Try not to have your dinner too late so
+          that you aren’t still digesting at bedtime and are at less risk of
+          acid reflux. Be extra careful with spicy and oily foods late in
+          the evening.
+        </p>
+        <p class="card-text">For more information, click here.</p>
+      </div>
+    </a>
+  </div>
+
+
+
+  {% endblock %}
