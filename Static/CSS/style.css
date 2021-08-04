@@ -178,29 +178,60 @@ nav ul ul li a.active{
     background-color: #212529;
     color:#f8f9fa;
     height: 800px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* flex-direction: column; */
+}
+.left, .right{
+    /* margin-top: -300px; */
+    display:flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width:45%;
+    height:100%;
 }
 .record label {
     display: inline-block;
     font: 1rem 'Fira Sans', sans-serif;
 }
     
-input,
-.record #appt{
-    padding : 3px 15px;
-    margin: 4px 4px;
+/* input, */
+/* .record .bt{
+    position:relative; */
+    /* padding : 3px 15px;
+    margin: 4px 4px; */
+/* } */
+
+.time{
+    font-size: 1rem;
 }
-.record label {
+.record label{
+    
     margin: .4rem 19px;
 }
 .record h2{
-    margin: 0px 19px;
-    padding: 4px 0px;
+    /* top:20px; */
+    margin: 10px 0px;
+    padding:30px;
+    /* padding: 70px 0px; */
+    font-size: 3.5rem;
+    /* margin-top:10px; */
 }
-.record i{
+/* .record i{
     background-color: black;
     height: 40px;
     width: 40px;
-} 
+}  */
+#icon1, #icon2:hover{
+     cursor: pointer;
+}
+#icon1, #icon2{
+    justify-content: center;
+    align-items: center;
+}
 
  /* .loginform{
     font-size: 20px;
