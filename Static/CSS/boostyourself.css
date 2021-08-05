@@ -27,7 +27,7 @@
     left:1vw;
     background-color: rgba(0,0,0,1);
     /* background-color: red; */
-    position: absolute;
+    position: fixed;
     top:10vh;
     visibility: hidden;
     overflow:hidden;
