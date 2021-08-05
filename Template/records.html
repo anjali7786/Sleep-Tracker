@@ -52,45 +52,76 @@
 </nav>
 
 <div class="record">
-  <div class="left">
+  <div class="left" action = "/records" method="POST">
 
     <h2 class="text-decoration-underline pt-3">Day sleep</h2>
     <div class="time">
       <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
       &nbsp;
-      <input type="time" class="appt1" name="appt" min="00:00" max="23:59" required>
+      <input type="time" class="appt1" name="bed" min="00:00" max="23:59" required>
+      <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
     </div>
     <div class="time">
       <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
       &nbsp;
-      <input type="time" class="appt2" name="appt" min="00:00" max="23:59" required>
+      <input type="time" class="appt2" name="wake" min="00:00" max="23:59" required>
+      <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
     </div>
   </br>
   <div class="time">
     <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
     &nbsp;
-      <input type="time" class="appt1" name="appt" min="00:00" max="23:59" required>
+      <input type="time" class="appt1" name="bed" min="00:00" max="23:59" required>
+      <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
     </div>
     <div class="time">
       <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
       &nbsp;
-      <input type="time" class="appt2" name="appt" min="00:00" max="23:59" required>
+      <input type="time" class="appt2" name="wake" min="00:00" max="23:59" required>
+      <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
     </div>
   </br>
   <div class="time">
     <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
     &nbsp;
-    <input type="time" class="appt1" name="appt" min="00:00" max="23:59" required>
+    <input type="time" class="appt1" name="bed" min="00:00" max="23:59" required>
+    <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
   </div>
   <div class="time">
     <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
     &nbsp;
-      <input type="time" class="appt2" name="appt" min="00:00" max="23:59" required>
+      <input type="time" class="appt2" name="wake" min="00:00" max="23:59" required>
+      <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
     </div>
   </br>
-  <img id="icon1" src="{{url_for('static' , filename = '../Static/Images/plus_icon.png')}}" width="105" height="57"
-  alt=".">
+  <div class="time">
+    <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
+    &nbsp;
+    <input type="time" class="appt1" name="bed" min="00:00" max="23:59" required>
+    <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+  </div>
+  <div class="time">
+    <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
+    &nbsp;
+    <input type="time" class="appt2" name="wake" min="00:00" max="23:59" required>
+    <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+  </div>
 </br>
+<div class="time">
+  <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
+  &nbsp;
+  <input type="time" class="appt1" name="bed" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+</div>
+<div class="time">
+  <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
+  &nbsp;
+  <input type="time" class="appt2" name="wake" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+</div>
+</br>
+  <!-- <img id="icon1" src="{{url_for('static' , filename = '../Static/Images/plus_icon.png')}}" width="105" height="57" -->
+  <!-- alt="."> -->
 </div>
 
 <div class="right">
@@ -99,39 +130,71 @@
   <div class="time">
     <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
     &nbsp;
-    <input type="time" class="appt1" name="appt" min="00:00" max="23:59" required>
+    <input type="time" class="appt1" name="bedt" min="00:00" max="23:59" required>
+    <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
   </div>
   <div class="time">
     <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
     &nbsp;
-    <input type="time" class="appt2" name="appt" min="00:00" max="23:59" required>
+    <input type="time" class="appt2" name="waket" min="00:00" max="23:59" required>
+    <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
   </div>
 </br>
 <div class="time">
   <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
   &nbsp;
-  <input type="time" class="appt1" name="appt" min="00:00" max="23:59" required>
+  <input type="time" class="appt1" name="bedt" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
 </div>
 <div class="time">
   <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
   &nbsp;
-  <input type="time" class="appt2" name="appt" min="00:00" max="23:59" required>
+  <input type="time" class="appt2" name="waket" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
 </div>
 </br>
 <div class="time">
   <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
   &nbsp;
-  <input type="time" class="appt1" name="appt" min="00:00" max="23:59" required>
+  <input type="time" class="appt1" name="bedt" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
 </div>
 <div class="time">
   <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
   &nbsp;
-  <input type="time" class="appt2" name="appt" min="00:00" max="23:59" required>
+  <input type="time" class="appt2" name="waket" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
 </div>
 </br>
-<img id="icon2" src="{{url_for('static' , filename = '../Static/Images/plus_icon.png')}}" width="105" height="57"
-alt=".">
+<div class="time">
+  <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
+  &nbsp;
+  <input type="time" class="appt1" name="bed" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+</div>
+<div class="time">
+  <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
+  &nbsp;
+  <input type="time" class="appt2" name="wake" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+</div>
 </br>
+<div class="time">
+  <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
+  &nbsp;
+  <input type="time" class="appt1" name="bed" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+</div>
+<div class="time">
+  <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
+  &nbsp;
+  <input type="time" class="appt2" name="wake" min="00:00" max="23:59" required>
+  <button type="submit" class = "btn btn-primary" class = "savetime">Save</button>
+</div>
+</br>
+<!-- <img id="icon2" src="{{url_for('static' , filename = '../Static/Images/plus_icon.png')}}" width="105" height="57"
+alt="."> -->
+
 </div>
 </div>
 {% endblock %}

@@ -51,7 +51,7 @@
                 <a
                   class="nav-link active text-decoration-underline fs-5 fw-normal"
                   aria-current="page"
-                  href="/"
+                  href="{{url_for('home')}}"
                   >Home</a
                 >
               </li>
@@ -85,7 +85,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 fw-normal" href="/boostyourself"
+                <a class="nav-link fs-5 fw-normal" href="{{url_for('boost_yourself')}}"
                   >Boost Yourself</a
                 >
               </li>
@@ -93,7 +93,7 @@
   
             <form class="d-flex mx-2">
               <a
-                href="/signup"
+                href="{{url_for('auth.signup')}}"
                 class="btn btn-outline-light mx-2 fs-5"
                 tabindex="-1"
                 role="button"
@@ -101,7 +101,7 @@
                 >Sign Up</a
               >
               <a
-                href="/login"
+                href="{{url_for('auth.login')}}"
                 class="btn btn-outline-light mx-2 fs-5"
                 tabindex="-1"
                 role="button"

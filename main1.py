@@ -1,18 +1,20 @@
 from flask import Flask , render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask import request
+# from werkzeug.datastructures import RequestCacheControl
 
 app = Flask(__name__ , template_folder= 'Template' , static_folder='Static')
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/records'
-# db = SQLAlchemy(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/records'
+db = SQLAlchemy(app)
 
 
-# class Day(db.Model):
-#     sno = db.Column(db.Integer, primary_key=True)
-#     bed = db.Column(db.String(80), unique=False, nullable=False)
-#     wake = db.Column(db.String(120), unique=False, nullable=False)
+class Day(db.Model):
+    sno = db.Column(db.Integer, primary_key=True)
+    bed = db.Column(db.DateTime, unique=False, nullable=True)
+    wake = db.Column(db.DateTime, unique=False, nullable=True)
 
-#     def __repr__(self):
-#         return '<User %r>' % self.username
+    def __repr__(self):
+        return '<User %r>' % self.username
 
 @app.route("/")
 def home():
@@ -22,8 +24,16 @@ def home():
 def track_your_sleep():
     return render_template('Trackmysleep.html')
 
-@app.route("/records")
+@app.route("/records", methods = ['GET', 'POST'])
 def records():
+    if (request.method == 'POST'):
+        bed_t = request.form.get('bed')
+        wake_t = request.form.get('wake')
+
+        entry = Day(bed = bed_t, wake = wake_t)
+        db.session.add(entry)
+        db.session.commit()
+
     return render_template('records.html')
 
 @app.route("/login")
