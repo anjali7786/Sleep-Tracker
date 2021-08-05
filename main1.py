@@ -1,4 +1,4 @@
-from flask import Flask , render_template
+from flask import Flask , render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask import request
 # from werkzeug.datastructures import RequestCacheControl
@@ -40,8 +40,24 @@ def records():
 def login():
     return render_template('login.html')
 
-@app.route("/signup")
+@app.route("/signup", methods=["GET","POST"])
 def signup():
+    if(request.method =='POST'):
+        name = request.form.get('name')
+        age = request.form.get('age')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        cpassword = request.form.get('cpassword')
+
+        if(password==cpassword):
+            entry = Login(name=name , age=age ,email=email , password=password)
+            db.session.add(entry)
+            db.session.commit()
+            return render_template('sleeptracker.html')
+            
+        else:
+            return("incorrect password! please try again.")
+            
     return render_template('signup.html')
 
 @app.route("/unabletosleep")
