@@ -1,19 +1,44 @@
-.sign{
+/* .sign{
     display: flex;
     font-size: 50px;
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
     /* border: 2px solid black; */
-  font-family:  'Eczar', serif;
-  text-shadow: 0px 0px 2px green;
-}
-.abc{
+  /* font-family:  'Eczar', serif; */
+  /* text-shadow: 0px 0px 2px green; */
+/* } */ 
+/* .abc{
     font-size: 20px;
     border: 2px solid black;
+} */
+.signup{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
-.btn{
-    margin-left: 10px;
+.signincontain p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    margin-top: 5px;
+}
+.msg h1{
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+.msg p{
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:red;
+    font-size: larger;
+    top:40px;
 }
 .signincontain{
     background-color: #212529;

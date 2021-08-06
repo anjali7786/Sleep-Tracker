@@ -214,6 +214,14 @@ imgclick31.addEventListener("click", function (){
 })
 
 
+let imgclick32= document.querySelectorAll(".box1 img")[31];
+let img32=`<img src="../Static/Images/Motivational-img/Zoomed/32 (1).jpg">`;
+imgclick32.addEventListener("click", function (){
+  overlay.insertAdjacentHTML("afterbegin",img32);
+  overlay.style.visibility="visible";
+})
+
+
 
 //To remove overlay
 overlay.addEventListener("click", function (){
