@@ -50,7 +50,7 @@ def signup():
         cpassword = request.form.get('cpassword')
 
         if(password==cpassword):
-            entry = Login(name=name , age=age ,email=email , password=password)
+            entry = login(name=name , age=age ,email=email , password=password)
             db.session.add(entry)
             db.session.commit()
             return render_template('sleeptracker.html')
