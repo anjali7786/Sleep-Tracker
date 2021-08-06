@@ -6,7 +6,7 @@
         .login2{
             margin-left: 100px;
         }
-        .container2{
+        .btn{
             /* border:2px solid black; */
             display: flex;
             text-align: center;
@@ -24,8 +24,37 @@
     
     /* background-color: burlywood; */
 }
+.msg1 h1{
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+.msg1 p{
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:red;
+    font-size: larger;
+    top:40px;
+}
+.log{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .mb-3{
 /* background-color: blanchedalmond; */
 margin-top :20px;
 }
    
+.logincontainer p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin-top: 5px;
+}
