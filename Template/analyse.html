@@ -1,93 +1,119 @@
 {% extends "layout.html" %} {% block body %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <div id="logo">
-        <img src="{{url_for('static' , filename ='../Static/Images/home_img/Logo (2).png') }}" alt="TrackNap.com" />
-      </div>
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link fs-5 fw-normal" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link active text-decoration-underline dropdown-toggle fs-5 fw-normal" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Track Your Sleep
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <a class="dropdown-item fs-5 fw-normal" href="/records">Records</a>
-              </li>
-              <li>
-                <a class="nav-link active text-decoration-underline dropdown-item fs-5 fw-normal" href="/analyse">Analyse Your Sleep</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-5 fw-normal" href="/unabletosleep">Unable To Sleep</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-5 fw-normal" href="/boostyourself">Boost Yourself</a>
-          </li>
-        </ul>
-  
-        <form class="d-flex mx-2">
-          <a href="/signup" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button" aria-disabled="true">Sign
-            Up</a>
-          <a href="/login" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button"
-            aria-disabled="true">Login</a>
-          <!-- <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a> -->
-          <!-- <button type="button" class="btn btn-outline-light mx-2">Sign Up</button>
-              <button type="button" class="btn btn-outline-light mx-2">Login</button> -->
-        </form>
-      </div>
+  <div class="container-fluid">
+    <div id="logo">
+      <img src="{{url_for('static' , filename ='../Static/Images/home_img/Logo (2).png') }}" alt="TrackNap.com" />
     </div>
-  </nav>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-normal" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active text-decoration-underline dropdown-toggle fs-5 fw-normal" href="#"
+            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Track Your Sleep
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item fs-5 fw-normal" href="/records">Records</a>
+            </li>
+            <li>
+              <a class="nav-link active text-decoration-underline dropdown-item fs-5 fw-normal" href="/analyse">Analyse
+                Your Sleep</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-normal" href="/unabletosleep">Unable To Sleep</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-normal" href="/boostyourself">Boost Yourself</a>
+        </li>
+      </ul>
+
+      <form class="d-flex mx-2">
+        <a href="/signup" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button"
+          aria-disabled="true">Sign
+          Up</a>
+        <a href="/login" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button"
+          aria-disabled="true">Login</a>
+        <!-- <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a> -->
+        <!-- <button type="button" class="btn btn-outline-light mx-2">Sign Up</button>
+              <button type="button" class="btn btn-outline-light mx-2">Login</button> -->
+      </form>
+    </div>
+  </div>
+</nav>
 
 
 
-  <div class="table-responsive">
-<div class="analysecontain">
+<div class="table-responsive">
+  <div class="analysecontain">
     <h2>Your sleeping records:</h2>
 
     <table class="ana table table-bordered pt-4">
-        <thead>
-            <tr class="bg-warning">
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-success">
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr class="bg-success">
+      <thead>
+        <tr class="bg-warning">
+          <!-- <th scope="col">S. No.</th> -->
+          <th scope="col">Username</th>
+          <th scope="col">Date</th>
+          <th scope="col">Bed time</th>
+          <th scope="col">Wakeup time</th>
+
+        </tr>
+      </thead>
+      <tbody>
+          {% for row in rows %}
+          <tr class="rows bg-success">
+            <!-- <th scope="row">{{row.sno}}</th> -->
+            <td>{{row.username}}</td>
+            <td>{{row.date}}</td>
+            <td>{{row.bedtime}}</td>
+            <td>{{row.wakeuptime}}</td>
+          </tr>
+          {% endfor %}
+
+        <!-- <tr class="rows bg-success">
+              <th scope="row">{{row["sno"]}}</th>
+              <td>{{row["username"]}}</td>
+              <td>{{row["date"]}}</td>
+              <td>{{row["bedtime"]}}</td>
+              <td>{{row["wakeuptime"]}}</td>
+          </tr>
+          <tr class="rows bg-success">
+            <th scope="row">{{row["sno"]}}</th>
+            <td>{{row["username"]}}</td>
+            <td>{{row["date"]}}</td>
+            <td>{{row["bedtime"]}}</td>
+            <td>{{row["wakeuptime"]}}</td>
+        </tr> -->
+
+
+
+
+        <!-- <tr class="rows bg-success">
                 <th scope="row">2</th>
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>@fat</td>
             </tr>
-            <tr class="bg-success">
+            <tr class="rows bg-success">
                 <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
                 <td>Larry</td>
                 <td>The bird</td>
-                <!-- <td colspan="2">Larry the Bird</td> -->
                 <td>@twitter</td>
-            </tr>
-        </tbody>
+              </tr> -->
+      </tbody>
     </table>
-</div>
+  </div>
 </div>
 
 {% endblock %}

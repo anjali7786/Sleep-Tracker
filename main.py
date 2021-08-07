@@ -6,6 +6,7 @@ import re
 import os, uuid
 from werkzeug.utils import secure_filename
 from datetime import date, timedelta, datetime
+import sqlite3 as sql
 
 app = Flask(__name__, template_folder= 'Template' , static_folder='Static')
 
@@ -133,6 +134,9 @@ def records():
             cursor.execute('INSERT INTO record VALUES (NULL, % s, % s, % s,% s)',(username , date, bedtime, wakeuptime,))
             mysql.connection.commit()
             cursor.close()
+
+           
+
     return render_template('records.html')
 
 
@@ -207,9 +211,42 @@ def records():
         #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt4, waket4,date.now(),))
 
   
-@app.route("/analyse")
+@app.route("/analyse", methods=['GET', 'POST'])
 def analyse():
-    return render_template('analyse.html')  
+    # cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    # cur.execute('SELECT * FROM login WHERE username = % s', (session['username'],))
+    # account = cur.fetchone()
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute('SELECT * FROM record WHERE username = % s', (session['username'],))
+    # account1 = cursor.fetchone()
+    # curs = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    # curs.execute("SELECT * FROM record WHERE username = ' "session['username']"'")
+
+    rows = cursor.fetchall();
+    for row in rows:
+        row = row
+    return render_template("analyse.html", rows = rows, row = row)
+
+    # user = ''
+    # dt = ''
+    # bt = ''
+    # wt =''
+    # username = request.form['username']
+    # date = request.form['date']
+    # bedtime = request.form['bedtime']
+    # wakeuptime = request.form['wakeuptime']
+
+    # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    # cursor.execute('SELECT * FROM record WHERE username = % s', (username,))
+    # user = cursor.fetchone()
+    # cursor.execute('SELECT * FROM record WHERE date = % s', (date,))
+    # dt = cursor.fetchone()
+    # cursor.execute('SELECT * FROM record WHERE bedtime = % s', (bedtime,))
+    # bt = cursor.fetchone()
+    # cursor.execute('SELECT * FROM record WHERE wakeuptime = % s', (wakeuptime,))
+    # wt = cursor.fetchone()
+
+    # return render_template('analyse.html', user = user, dt =dt, bt = bt, wt = wt)  
 
 @app.route("/unabletosleep")
 def unable_to_sleep():
