@@ -1,0 +1,153 @@
+{% extends "layout.html" %} {% block body %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <div id="logo">
+      <img src="{{url_for('static' , filename ='../Static/Images/home_img/Logo (2).png') }}" alt="TrackNap.com" />
+    </div>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active disabled text-decoration-underline fs-5 fw-normal" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5 fw-normal disabled" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Track Your Sleep
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item fs-5 fw-normal"  href="/records">Records</a>
+            </li>
+            <li>
+              <a class="dropdown-item fs-5 fw-normal" href="/analyse">Analyse Your Sleep</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-normal disabled" href="/unabletosleep">Unable To Sleep</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 fw-normal disabled" href="/boostyourself">Boost Yourself</a>
+        </li>
+      </ul>
+
+      <form class="d-flex mx-2">
+        <a href="/signup" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button" aria-disabled="true">Sign
+          Up</a>
+        <a href="/login" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button"
+          aria-disabled="true">Login</a>
+        <!-- <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a> -->
+        <!-- <button type="button" class="btn btn-outline-light mx-2">Sign Up</button>
+            <button type="button" class="btn btn-outline-light mx-2">Login</button> -->
+      </form>
+    </div>
+  </div>
+</nav>
+<section id="home">
+
+
+  <div class="container">
+    <!-- <div class="msg2">
+      <p class="mb-4">Welcome! {{msg}}</p>
+    </div> -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{url_for('static' , filename ='Images/home_img/journal.jpg') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static' , filename ='Images/home_img/get_good_sleep.jpg') }}" class="d-block  w-100"
+            alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static' , filename ='Images/home_img/alarm_hand.jpg') }}" class="d-block  w-100"
+            alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static' , filename ='../Static/Images/home_img/time_precious.jpg')}}"
+            class="d-block  w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static' , filename ='../Static/Images/home_img/hourglass.jpg') }}" class="d-block  w-100"
+            alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="row featurette d-flex justify-content-center my-5 mx-50">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">About this website<span class="text-muted"></span></h2>
+        <ul>
+          <!-- <h1>About this website</h1> -->
+          <li>Track your daily sleep in an efficient and easy manner.</li>
+          <li>You just need to enter your daily sleep and wakeup time after every nap to keep a track of
+            it.
+          </li>
+          <li>Analyse your sleeping hours from a bar graph which will show whether your are taking proper
+            sleep or not.</li>
+          <li>This will be a sign for you to have a good sleep everyday id you already don’t.</li>
+          <li>Feeling low? Or unable to sleep? Don’t worry, we’ve got your back. </li>
+          <li>This website has some yoga and exercises which will help you to sleep and also a slideshow
+            of
+            some motivational posts to boost you and provide you the energy to work for your goals.</li>
+        </ul>
+
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img img-fluid" width="500" height="300"
+          src="{{url_for('static' , filename ='../Static/Images/home_img/in-the-morning-4652076_1920.jpg')}}" alt="..">
+      </div>
+    </div>
+    <div class="row featurette d-flex justify-content-center">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Why do we need to take good sleep?<span class="text-muted"></span>
+        </h2>
+        <ul>
+          <li>Sleep is an essential function that allows our body and mind to recharge,
+            leaving you fresh and alert when you wake up.
+          </li>
+          <li>A good sleep at night is as important as regular exercise and a balanced
+            diet is.</li>
+          <li>Poor and irregular sleeping patterns can adversely affect your productivity
+            and it can also lead to hormonal imbalances.
+          </li>
+          <li>Improper or less sleep causes fatigue which leads to stress and it can
+            affect mental health of a person to a great extent.
+          </li>
+          <li>Adequate amount of sleep also improves memory and increases concentration
+            power.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img img-fluid" width="500" height="300"
+          src="../Static/Images/home_img/sleepinggirl1.jpg" alt="..">
+      </div>
+      
+        
+
+    </div>
+
+
+    
+</section>
+{% endblock %}
