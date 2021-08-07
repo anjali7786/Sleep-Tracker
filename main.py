@@ -22,7 +22,7 @@ def sleeptracker():
     if 'loggedin' in session:
         return render_template('sleeptracker.html', username=session['username'],
                                email1=session['email'])
-    return render_template('sleeptracker.html',username="",email="")
+    return render_template('index.html',username="",email="")
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
