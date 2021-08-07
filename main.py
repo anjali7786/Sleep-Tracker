@@ -39,11 +39,12 @@ def login():
             if user and bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
                     session['loggedin'] = True
                     session['id'] = user['id']
-                    # session['fullname'] = user['fullname']
+                    session['fullname'] = user['fullname']
                     session['username'] = user['username']
                     # session['age'] = user['age']
                     session['email'] = user['email']
                     # session['mobile'] = user['mobile']
+                    # msg = "Logged in successfully"
                     return redirect(url_for('sleeptracker'))
             else:
                 msg = "Incorrect username/password!"
@@ -105,6 +106,7 @@ def signup():
                 mysql.connection.commit()
                 cursor.close()
                 msg = 'You have successfully Signed In !'
+                
         else:
             msg = 'Please fill out the form !'
 
@@ -121,67 +123,93 @@ def track_your_sleep():
 
 @app.route("/records", methods = ['GET', 'POST'])
 def records():
-     if (request.method == 'POST'):
-        bed1 = request.form('bed1')
-        wake1 = request.form('wake1')
-        bed2 = request.form('bed2')
-        wake2 = request.form('wake2')
-        bed3 = request.form('bed3')
-        wake3 = request.form('wake3')
-        bed4 = request.form('bed4')
-        wake4 = request.form('wake4')
-        bedt1 = request.form('bedt1')
-        waket1 = request.form('waket1')
-        bedt2 = request.form('bedt2')
-        waket2 = request.form('waket2')
-        bedt3 = request.form('bedt3')
-        waket3 = request.form('waket3')
-        bedt4 = request.form('bedt4')
-        waket4 = request.form('waket4')
+    if request.method == "POST":
+        username = request.form['username']
+        date = request.form['date']
+        bedtime = request.form['bedtime']
+        wakeuptime = request.form['wakeuptime']
+        if len(username) > 0 and len(date) > 0 and len(bedtime) > 0 and len(wakeuptime) >0:
+            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            cursor.execute('INSERT INTO record VALUES (NULL, % s, % s, % s,% s)',(username , date, bedtime, wakeuptime,))
+            mysql.connection.commit()
+            cursor.close()
+    return render_template('records.html')
+
+
+
+
+
+
+    # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    # cursor.execute('SELECT * FROM login WHERE username = % s', (session['username'],))
+    # account = cursor.fetchone()
+    # if account:
+        
+    #     if request.method == 'POST':
+    # if session['loggedin'] == True:
+            # bed1 = request.form['bedtime']
+            # wake1 = request.form['wakeuptime']
+        # bed2 = request.form('bed2')
+        # wake2 = request.form('wake2')
+        # bed3 = request.form('bed3')
+        # wake3 = request.form('wake3')
+        # bed4 = request.form('bed4')
+        # wake4 = request.form('wake4')
+            # bedt1 = request.form['bedtime1']
+            # waket1 = request.form['wakeuptime1']
+        # bedt2 = request.form('bedt2')
+        # waket2 = request.form('waket2')
+        # bedt3 = request.form('bedt3')
+        # waket3 = request.form('waket3')
+        # bedt4 = request.form('bedt4')
+        # waket4 = request.form('waket4')
         
 
-        if len(bed1) > 0 and len(wake1) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bed1, wake1,date.now(),))
+            # if len(bed1) > 0 and len(wake1) > 0 :
+            #     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    
+            #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s, %s)',( session['username'] ,session['email'] , bed1, wake1,date.now(),))
         
-        if len(bed2) > 0 and len(wake2) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        # if len(bed2) > 0 and len(wake2) > 0 :
+        #     # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bed2, wake2,date.now(),))
+        #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bed2, wake2,date.now(),))
         
-        if len(bed3) > 0 and len(wake3) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        # if len(bed3) > 0 and len(wake3) > 0 :
+        #     # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bed3, wake3,date.now(),))
+        #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bed3, wake3,date.now(),))
         
-        if len(bed4) > 0 and len(wake4) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        # if len(bed4) > 0 and len(wake4) > 0 :
+        #     # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bed4, wake4,date.now(),))
+        #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bed4, wake4,date.now(),))
         
-        if len(bedt1) > 0 and len(waket1) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            # if len(bedt1) > 0 and len(waket1) > 0 :
+            #     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt1, waket1,date.now(),))
+            #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s, %s)',( session['username'] ,session['email'] , bedt1, waket1,date.now(),))
         
-        if len(bedt2) > 0 and len(waket2) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        # if len(bedt2) > 0 and len(waket2) > 0 :
+        #     # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt2, waket2,date.now(),))
+        #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt2, waket2,date.now(),))
         
         
-        if len(bedt3) > 0 and len(waket3) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        # if len(bedt3) > 0 and len(waket3) > 0 :
+        #     # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt3, waket3,date.now(),))
+        #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt3, waket3,date.now(),))
 
-        if len(bedt4) > 0 and len(waket4) > 0 :
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        # if len(bedt4) > 0 and len(waket4) > 0 :
+        #     # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 
-            cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt4, waket4,date.now(),))
+        #     cursor.execute('INSERT INTO records VALUES (NULL, % s, % s, % s,% s)',( session['username'] ,session['email'] , bedt4, waket4,date.now(),))
 
-     return render_template('records.html')
+  
+@app.route("/analyse")
+def analyse():
+    return render_template('analyse.html')  
 
 @app.route("/unabletosleep")
 def unable_to_sleep():

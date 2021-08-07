@@ -7,7 +7,17 @@ body{
 
 }
 
-
+.msg2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.msg2 p{
+    color:red;
+    font-size: larger;
+    top:40px;
+}
 /* .container{
     display:grid;
     grid-column: auto;
@@ -187,14 +197,18 @@ nav ul ul li a.active{
     overflow: hidden;
     /* flex-direction: column; */
 }
-.left, .right{
+.record .track{
     /* margin-top: -300px; */
     display:flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    width:45%;
+    /* width:45%; */
     height:100%;
+}
+.track .bt{
+    margin-left:0px;
+    margin-bottom: 3px;
 }
 .record label {
     display: inline-block;
@@ -210,6 +224,12 @@ nav ul ul li a.active{
 
 .time{
     font-size: 1rem;
+}
+.record .savetime{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
 }
 .record label{
     
@@ -228,13 +248,13 @@ nav ul ul li a.active{
     height: 40px;
     width: 40px;
 }  */
-#icon1, #icon2:hover{
+/* #icon1, #icon2:hover{
      cursor: pointer;
 }
 #icon1, #icon2{
     justify-content: center;
     align-items: center;
-}
+} */
 
  /* .loginform{
     font-size: 20px;
