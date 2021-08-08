@@ -51,7 +51,7 @@ def login():
                 msg = "Incorrect username/password!"
         else:
             msg = " Please fill the form !"
-    return render_template('login.html', msg=msg)
+    return render_template('sleeptracker.html', msg=msg)
 
 
 @app.route('/logout')
