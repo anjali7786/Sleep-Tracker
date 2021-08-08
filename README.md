@@ -59,17 +59,12 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     ```
     pip install flask,
     pip install bcrypt,
- main
-    pip install flask_mysqldb,pip install -U Werkzeug,pip install mysqlclient
-    
-      
     pip install flask_mysqldb,
     pip install flask_mail
     ```
    
     ```
   
- main
 
 ## Snapshots
 
@@ -77,7 +72,8 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 
 ![Screenshot (383)](https://user-images.githubusercontent.com/85924566/128629949-cdb31644-83ef-400f-8163-d46533710230.png)
 
-![Screenshot (375)](https://user-images.githubusercontent.com/85924566/128606246-ac6ed249-65b3-45fd-95df-0d722d19db9f.png)
+![image](https://user-images.githubusercontent.com/85924566/128641160-17d06d82-1c90-460a-909e-929f719a14d2.png)
+
 
 
 - Sign Up page
@@ -86,18 +82,14 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 
 ![Screenshot (384)](https://user-images.githubusercontent.com/85924566/128630065-86f2a29f-fa1b-4b8c-bc39-3cf0ae34b3db.png)
 
-**once you fill the signup form then this page will appear on the screen . According to your convinience either you can save password or you have to login again and again to open the website if you choose never.** 
-
-![Screenshot (385)](https://user-images.githubusercontent.com/85924566/128630142-0b110e45-9948-4c1c-9ba4-41aa298bed43.png)
 
 - Unable to sleep
 
 **To zoom the content of Yoga, Meditation, Food and Habbits hover on respective image**
 
-![Screenshot (387)](https://user-images.githubusercontent.com/85924566/128630305-f0d22bbe-ea03-421e-9978-51d6b303f4a2.png)
-![Screenshot (379)](https://user-images.githubusercontent.com/85924566/128606914-0c0beb50-694d-48d3-87b4-84a8c9ba987d.png)
-![Screenshot (380)](https://user-images.githubusercontent.com/85924566/128606930-da2e24e6-244d-4947-b511-dc2c63383f0e.png)
-
+![Screenshot (394)](https://user-images.githubusercontent.com/85924566/128641206-c791ae31-8b7c-4ba7-8b71-184cad30deae.png)
+![Screenshot (395)](https://user-images.githubusercontent.com/85924566/128641216-8d430a59-52c2-409d-b2fd-f04fba30a558.png)
+![Screenshot (395)](https://user-images.githubusercontent.com/85924566/128641228-39fff75e-f99d-41ef-8092-7f8b6ed5b034.png)
 
 - Boostyourself page
 
@@ -106,24 +98,24 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 **To zoom the image of Boostyourself click on image**
 
 ![Screenshot (389)](https://user-images.githubusercontent.com/85924566/128630410-cf2eecf2-68a5-4f86-b3a3-fec3b833352f.png)
-  
+
+
+   
 - Record page in Track your sleep
 **It is compulsory to fill all the entries in Track your nap form**
 
 ![Screenshot (391)](https://user-images.githubusercontent.com/85924566/128630489-16bf8ace-865a-4e59-9494-4e12fb3dda06.png)
 
-- Analyse your sleep page in Track your sleep
+- Analyze your sleep in Track your sleep
 
-**Here you can see sleeping records of last 7 days**
-
-![IMG-20210808-WA0021](https://user-images.githubusercontent.com/85924566/128634847-81f50293-77b0-49ef-b319-e7d9113dd78b.jpg)
+![Screenshot (74)](https://user-images.githubusercontent.com/85924566/128641275-fdc56ccd-009c-4357-a690-b46cc78e039c.png)
 
 -Login page
 
 **Once you logout then to visit website again  you don't need to fill signup form again and again, just fill entries in login in form.**
 **It will automatically filled by system if you have saved password in the beginning .**
 
-![Screenshot (392)](https://user-images.githubusercontent.com/85924566/128630528-9a7f4e1d-12d9-4a93-bb1b-58ed9e106915.png)
 
+![Screenshot (392)](https://user-images.githubusercontent.com/85924566/128630528-9a7f4e1d-12d9-4a93-bb1b-58ed9e106915.png)
 
 
