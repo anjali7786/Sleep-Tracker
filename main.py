@@ -17,6 +17,9 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'tracknap'
 
 mysql = MySQL(app)
+@app.route("/index")
+def index():
+    return render_template('index.html')
 
 @app.route("/", methods=['GET', 'POST'])
 def sleeptracker():
@@ -54,12 +57,13 @@ def login():
     return render_template('login.html', msg=msg)
 
 
-@app.route('/logout')
+@app.route('/logout', methods=['GET', 'POST'])
 def logout():
-    session.pop('loggedin', None)
-    session.pop('id', None)
-    session.pop('username', None)
-    session.pop('email', None)
+    if request.method == 'POST':
+        session.pop('loggedin', False)
+        session.pop('id', None)
+        session.pop('username', None)
+        session.pop('email', None)
     # session.pop('age', None)
     # session.pop('mobile', None)
     return redirect(url_for('login'))
