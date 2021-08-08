@@ -5,7 +5,8 @@ import MySQLdb.cursors
 import re
 import os, uuid
 from werkzeug.utils import secure_filename
-from datetime import date, timedelta, datetime
+from datetime import date, datetime, timedelta
+import datetime
 import sqlite3 as sql
 
 app = Flask(__name__, template_folder= 'Template' , static_folder='Static')
@@ -17,11 +18,11 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'tracknap'
 
 mysql = MySQL(app)
-@app.route("/index")
+@app.route("/")
 def index():
     return render_template('index.html')
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/sleeptracker", methods=['GET', 'POST'])
 def sleeptracker():
     if 'loggedin' in session:
         return render_template('sleeptracker.html', username=session['username'],
@@ -54,7 +55,7 @@ def login():
                 msg = "Incorrect username/password!"
         else:
             msg = " Please fill the form !"
-    return render_template('sleeptracker.html', msg=msg)
+    return render_template('login.html', msg=msg)
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -110,7 +111,12 @@ def signup():
                 cursor.execute('INSERT INTO login VALUES (NULL, % s, % s, % s,% s, % s)',(fullname, username , email, hashed, hashed,))
                 mysql.connection.commit()
                 cursor.close()
-                msg = 'You have successfully Signed In !'
+                session['loggedin'] = True
+                session['fullname'] = fullname
+                session['username'] = username
+                session['email'] = email
+                # msg = 'You have successfully Signed In !'
+                return redirect(url_for('sleeptracker'))
                 
         else:
             msg = 'Please fill out the form !'
@@ -129,7 +135,7 @@ def track_your_sleep():
 @app.route("/records", methods = ['GET', 'POST'])
 def records():
     if request.method == "POST":
-        username = request.form['username']
+        username = session['username']
         date = request.form['date']
         bedtime = request.form['bedtime']
         wakeuptime = request.form['wakeuptime']
@@ -221,7 +227,13 @@ def analyse():
     # cur.execute('SELECT * FROM login WHERE username = % s', (session['username'],))
     # account = cur.fetchone()
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute('SELECT * FROM record WHERE username = % s', (session['username'],))
+    current_date = date.today()
+    # a_date = datetime.date(current_date)
+    days = datetime.timedelta(7)
+    new_date = current_date - days
+
+    cursor.execute('SELECT * FROM record WHERE username = % s AND date >= %s', (session['username'], new_date))
+    # cursor.execute('SELECT * FROM record WHERE date>= %s AND username = %s', (DATE(NOW()) - INTERVAL 7 DAY, session['username']))
     # account1 = cursor.fetchone()
     # curs = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     # curs.execute("SELECT * FROM record WHERE username = ' "session['username']"'")
