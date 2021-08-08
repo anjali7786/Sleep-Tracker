@@ -59,12 +59,17 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     ```
     pip install flask,
     pip install bcrypt,
+ main
+    pip install flask_mysqldb,pip install -U Werkzeug,pip install mysqlclient
+    
+      
     pip install flask_mysqldb,
     pip install flask_mail
     ```
    
     ```
   
+ main
 
 ## Snapshots
 
