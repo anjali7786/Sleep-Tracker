@@ -48,7 +48,6 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     $env:FLASK_APP = "main"
     pip install bcrypt
     pip install flask_mysqldb
-    pip install flask_mail
     flask run
     ```
    
@@ -61,13 +60,10 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     pip install flask,
     pip install bcrypt,
     pip install flask_mysqldb,
-    pip install flask_mail
     
-   
-    
-  
+      
 
-## Snapshots
+## Some glimpse of Tracknap
 
 - Homepage
 ![Screenshot (372)](https://user-images.githubusercontent.com/85924566/128605314-f9082fe3-9abd-4007-a481-1f0073b49452.png)
