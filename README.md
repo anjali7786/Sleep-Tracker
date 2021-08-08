@@ -1,4 +1,3 @@
-
 # _Tracknap_
 ![Logo (2) (2)](https://user-images.githubusercontent.com/85924566/128607590-b60d57ed-be85-4e1c-8c50-151ec2f61c53.png)
 
@@ -48,6 +47,7 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     $env:FLASK_APP = "main"
     pip install bcrypt
     pip install flask_mysqldb
+    pip install flask_mail
     flask run
     ```
    
@@ -59,42 +59,71 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     ```
     pip install flask,
     pip install bcrypt,
+ main
     pip install flask_mysqldb,pip install -U Werkzeug,pip install mysqlclient
     
       
+    pip install flask_mysqldb,
+    pip install flask_mail
+    ```
+   
+    ```
+  
+ main
 
-## Some glimpse of Tracknap
+## Snapshots
 
 - Homepage
-![Screenshot (372)](https://user-images.githubusercontent.com/85924566/128605314-f9082fe3-9abd-4007-a481-1f0073b49452.png)
+
+![Screenshot (383)](https://user-images.githubusercontent.com/85924566/128629949-cdb31644-83ef-400f-8163-d46533710230.png)
+
 ![Screenshot (375)](https://user-images.githubusercontent.com/85924566/128606246-ac6ed249-65b3-45fd-95df-0d722d19db9f.png)
 
-- Login page
 
-![Screenshot (373)](https://user-images.githubusercontent.com/85924566/128606078-8d93bebb-9023-49f3-9df5-d743f31ffb60.png)
-**Once you login only then you will be able to see remaining pages**
 - Sign Up page
 
-![Screenshot (374)](https://user-images.githubusercontent.com/85924566/128606118-e452eafb-1f63-4c59-b485-ced74ae072f3.png)
+**To activate other pages you have to fill sign up form**
 
-- Unable to sleep page
+![Screenshot (384)](https://user-images.githubusercontent.com/85924566/128630065-86f2a29f-fa1b-4b8c-bc39-3cf0ae34b3db.png)
+
+**once you fill the signup form then this page will appear on the screen . According to your convinience either you can save password or you have to login again and again to open the website if you choose never.** 
+
+![Screenshot (385)](https://user-images.githubusercontent.com/85924566/128630142-0b110e45-9948-4c1c-9ba4-41aa298bed43.png)
+
+- Unable to sleep
+
 **To zoom the content of Yoga, Meditation, Food and Habbits hover on respective image**
-![Screenshot (378)](https://user-images.githubusercontent.com/85924566/128606782-566ef7fc-b6a8-4b32-87bc-b55c8db7787c.png)
+
+![Screenshot (387)](https://user-images.githubusercontent.com/85924566/128630305-f0d22bbe-ea03-421e-9978-51d6b303f4a2.png)
 ![Screenshot (379)](https://user-images.githubusercontent.com/85924566/128606914-0c0beb50-694d-48d3-87b4-84a8c9ba987d.png)
 ![Screenshot (380)](https://user-images.githubusercontent.com/85924566/128606930-da2e24e6-244d-4947-b511-dc2c63383f0e.png)
 
 
 - Boostyourself page
-![Screenshot (376)](https://user-images.githubusercontent.com/85924566/128606486-22f9f48e-050b-4405-b851-36568b4ed0fb.png)
+
+![Screenshot (388)](https://user-images.githubusercontent.com/85924566/128630355-3e065252-3cc4-47a9-bad2-7b607780631c.png)
 
 **To zoom the image of Boostyourself click on image**
 
-![Screenshot (377)](https://user-images.githubusercontent.com/85924566/128607821-46d5fc5a-454e-42b2-94bb-6193dc86c72b.png)
-
-   
+![Screenshot (389)](https://user-images.githubusercontent.com/85924566/128630410-cf2eecf2-68a5-4f86-b3a3-fec3b833352f.png)
+  
 - Record page in Track your sleep
 **It is compulsory to fill all the entries in Track your nap form**
 
-![Screenshot (381)](https://user-images.githubusercontent.com/85924566/128607191-95b36e52-13bc-4d0f-8add-064d356d5392.png)
+![Screenshot (391)](https://user-images.githubusercontent.com/85924566/128630489-16bf8ace-865a-4e59-9494-4e12fb3dda06.png)
+
+- Analyse your sleep page in Track your sleep
+
+**Here you can see sleeping records of last 7 days**
+
+![IMG-20210808-WA0021](https://user-images.githubusercontent.com/85924566/128634847-81f50293-77b0-49ef-b319-e7d9113dd78b.jpg)
+
+-Login page
+
+**Once you logout then to visit website again  you don't need to fill signup form again and again, just fill entries in login in form.**
+**It will automatically filled by system if you have saved password in the beginning .**
+
+![Screenshot (392)](https://user-images.githubusercontent.com/85924566/128630528-9a7f4e1d-12d9-4a93-bb1b-58ed9e106915.png)
+
 
 

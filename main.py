@@ -123,10 +123,7 @@ def signup():
 
     return render_template('signup.html', msg=msg)
 
-    
-# @app.route("/")
-# def home():
-#     return render_template('sleeptracker.html')
+
 
 @app.route("/Trackmysleep")
 def track_your_sleep():
@@ -223,21 +220,16 @@ def records():
   
 @app.route("/analyse", methods=['GET', 'POST'])
 def analyse():
-    # cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    # cur.execute('SELECT * FROM login WHERE username = % s', (session['username'],))
-    # account = cur.fetchone()
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     current_date = date.today()
-    # a_date = datetime.date(current_date)
     days = datetime.timedelta(7)
     new_date = current_date - days
 
-    cursor.execute('SELECT * FROM record WHERE username = % s AND date >= %s', (session['username'], new_date))
+    cursor.execute('SELECT * FROM record WHERE username = % s AND date >= %s ORDER BY date DESC', (session['username'], new_date))
     # cursor.execute('SELECT * FROM record WHERE date>= %s AND username = %s', (DATE(NOW()) - INTERVAL 7 DAY, session['username']))
     # account1 = cursor.fetchone()
     # curs = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     # curs.execute("SELECT * FROM record WHERE username = ' "session['username']"'")
-
     rows = cursor.fetchall();
     for row in rows:
         row = row
