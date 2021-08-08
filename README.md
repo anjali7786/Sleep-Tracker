@@ -107,6 +107,12 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 
 ![Screenshot (391)](https://user-images.githubusercontent.com/85924566/128630489-16bf8ace-865a-4e59-9494-4e12fb3dda06.png)
 
+-Analyse your sleep page in Track your sleep
+
+**Here you can see sleeping records of last 7 days**
+
+![IMG-20210808-WA0021](https://user-images.githubusercontent.com/85924566/128634847-81f50293-77b0-49ef-b319-e7d9113dd78b.jpg)
+
 -Login page
 
 **Once you logout then to visit website again  you don't need to fill signup form again and again, just fill entries in login in form.**
