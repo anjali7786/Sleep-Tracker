@@ -70,30 +70,29 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 
 - Homepage
 
-![Screenshot (383)](https://user-images.githubusercontent.com/85924566/128629949-cdb31644-83ef-400f-8163-d46533710230.png)
+![home](https://user-images.githubusercontent.com/85924566/128641589-84d4cd87-1788-4963-aa28-ec5182c2091f.png)
 
-![image](https://user-images.githubusercontent.com/85924566/128641160-17d06d82-1c90-460a-909e-929f719a14d2.png)
 
+![about](https://user-images.githubusercontent.com/85924566/128641616-9dc2e97f-d48a-4465-ad37-7f4bf3854ef5.png)
 
 
 - Sign Up page
 
 **To activate other pages you have to fill sign up form**
-
-![Screenshot (384)](https://user-images.githubusercontent.com/85924566/128630065-86f2a29f-fa1b-4b8c-bc39-3cf0ae34b3db.png)
+![signup (1)](https://user-images.githubusercontent.com/85924566/128641669-ed6b585b-5b2c-403f-b5c2-adc04de50120.png)
 
 
 - Unable to sleep
 
 **To zoom the content of Yoga, Meditation, Food and Habbits hover on respective image**
 
-![Screenshot (394)](https://user-images.githubusercontent.com/85924566/128641206-c791ae31-8b7c-4ba7-8b71-184cad30deae.png)
-![Screenshot (395)](https://user-images.githubusercontent.com/85924566/128641216-8d430a59-52c2-409d-b2fd-f04fba30a558.png)
-![Screenshot (395)](https://user-images.githubusercontent.com/85924566/128641228-39fff75e-f99d-41ef-8092-7f8b6ed5b034.png)
+![unable](https://user-images.githubusercontent.com/85924566/128641701-c36dbd37-6200-40ef-b2db-22ab8b7682cd.png)
+![unable1](https://user-images.githubusercontent.com/85924566/128641715-e460cfa9-b97f-498b-9aee-54206043bafe.png)
 
 - Boostyourself page
 
-![Screenshot (388)](https://user-images.githubusercontent.com/85924566/128630355-3e065252-3cc4-47a9-bad2-7b607780631c.png)
+![boostyourself](https://user-images.githubusercontent.com/85924566/128641742-61f4cb32-5b0a-4683-85a5-210025b52f0c.png)
+
 
 **To zoom the image of Boostyourself click on image**
 
@@ -104,18 +103,18 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 - Record page in Track your sleep
 **It is compulsory to fill all the entries in Track your nap form**
 
-![Screenshot (391)](https://user-images.githubusercontent.com/85924566/128630489-16bf8ace-865a-4e59-9494-4e12fb3dda06.png)
+![records](https://user-images.githubusercontent.com/85924566/128641761-11a1ac80-0055-4488-9c2b-10cd2b29e3f3.png)
 
 - Analyze your sleep in Track your sleep
 
 ![Screenshot (74)](https://user-images.githubusercontent.com/85924566/128641275-fdc56ccd-009c-4357-a690-b46cc78e039c.png)
 
--Login page
+- Login page
 
 **Once you logout then to visit website again  you don't need to fill signup form again and again, just fill entries in login in form.**
 **It will automatically filled by system if you have saved password in the beginning .**
 
 
-![Screenshot (392)](https://user-images.githubusercontent.com/85924566/128630528-9a7f4e1d-12d9-4a93-bb1b-58ed9e106915.png)
+![login](https://user-images.githubusercontent.com/85924566/128641788-8fa5ecb6-aba5-49bc-abbd-cba536697ee9.png)
 
 
