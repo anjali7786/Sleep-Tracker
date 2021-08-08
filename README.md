@@ -107,7 +107,7 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 
 ![Screenshot (391)](https://user-images.githubusercontent.com/85924566/128630489-16bf8ace-865a-4e59-9494-4e12fb3dda06.png)
 
--Analyse your sleep page in Track your sleep
+- Analyse your sleep page in Track your sleep
 
 **Here you can see sleeping records of last 7 days**
 
