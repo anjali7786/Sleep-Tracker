@@ -52,6 +52,11 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     ```
    
     ```
+     - Or run `requirements.txt` file :
+    ```
+    pip install -r requirements.txt
+    ```
+    
   For Pycharm code editor do the following:
    - Open the terminal
 
