@@ -59,7 +59,7 @@ body{
     .content{
         width: 630px;
         height: 300px;
-        margin: 40px auto;
+        margin: 50px auto;
         font-size: 0.9rem;
      }
      .box:hover div{
@@ -75,6 +75,44 @@ body{
     .box:hover img{
         width: 710px;
         height: 400px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 780px){
+    .box{
+        /* position: relative; */
+        width: 650px;
+        height: 350px;
+        margin: 20px auto;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        /* z-index: -1; */
+    }
+    .box img{
+        width: 650px;
+        height: 350px;
+        margin: auto;
+    }
+    .content{
+        width: 600px;
+        height: 250px;
+        margin: 45px auto;
+        font-size: 0.85rem;
+     }
+     .box:hover div{
+        margin: 22px auto;
+        font-size: 1.rem;
+     }
+    .box:hover{
+        width: 680px;
+        height: 370px;
+        margin:   auto;
+        /* z-index: 2; */
+    }
+    .box:hover img{
+        width: 680px;
+        height: 370px;
         margin: auto;
     }
 }
@@ -97,11 +135,11 @@ body{
     .content{
         width: 450px;
         height: 280px;
-        margin: 30px auto;
+        margin: 40px auto;
         font-size:0.8rem;
      }
      .box:hover div{
-        margin: 18px auto;
+        margin: 20px auto;
         font-size: 1rem;
      }
     .box:hover{
@@ -135,11 +173,11 @@ body{
     .content{
         width: 350px;
         height: 180px;
-        margin: 20px auto;
+        margin: 30px auto;
         font-size: 0.7rem;
      }
      .box:hover div{
-        margin: 10px auto;
+        margin: 15px auto;
         font-size: 0.9rem;
      }
     .box:hover{
@@ -151,6 +189,82 @@ body{
     .box:hover img{
         width: 430px;
         height: 270px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 450px){
+    .box{
+        /* position: relative; */
+        width: 320px;
+        height: 230px;
+        margin: 20px auto;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        /* z-index: -1; */
+    }
+    .box img{
+        width: 320px;
+        height: 230px;
+        margin: auto;
+    }
+    .content{
+        width: 280px;
+        height: 150px;
+        margin: 20px auto;
+        font-size: 0.6rem;
+     }
+     .box:hover div{
+        margin: 10px auto;
+        font-size: 0.8rem;
+     }
+    .box:hover{
+        width: 350px;
+        height: 250px;
+        margin:   auto;
+        /* z-index: 2; */
+    }
+    .box:hover img{
+        width: 250px;
+        height: 230px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 380px){
+    .box{
+        /* position: relative; */
+        width: 280px;
+        height: 200px;
+        margin: 20px auto;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        /* z-index: -1; */
+    }
+    .box img{
+        width: 280px;
+        height: 200px;
+        margin: auto;
+    }
+    .content{
+        width: 250px;
+        height: 150px;
+        margin: 10px auto;
+        font-size: 0.6rem;
+     }
+     .box:hover div{
+        margin: 5px auto;
+        font-size: 0.8rem;
+     }
+    .box:hover{
+        width: 310px;
+        height: 220px;
+        margin:   auto;
+        /* z-index: 2; */
+    }
+    .box:hover img{
+        width: 310px;
+        height: 220px;
         margin: auto;
     }
 }
