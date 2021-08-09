@@ -51,7 +51,7 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
     flask run
     ```
    
-    ```
+    
    - Or run `requirements.txt` file :
     ```
     pip install -r requirements.txt
