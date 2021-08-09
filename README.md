@@ -79,8 +79,24 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 - Sign Up page
 
 **To activate other pages you have to fill sign up form**
-![signup (1)](https://user-images.githubusercontent.com/85924566/128641669-ed6b585b-5b2c-403f-b5c2-adc04de50120.png)
+![Screenshot (398)](https://user-images.githubusercontent.com/85924566/128654101-e616778c-3fa4-410f-9a97-c4cbfd874ba4.png)
 
+- Login page
+
+**Once you logout then to visit website again  you don't need to fill signup form again and again, just fill entries in login in form.**
+**It will automatically filled by system if you have saved password in the beginning .**
+
+![Screenshot (400)](https://user-images.githubusercontent.com/85924566/128654136-d9013bac-93ab-4e67-be46-ad8abcd8ec66.png)
+
+   
+- Record page in Track your sleep
+**It is compulsory to fill all the entries in Track your nap form**
+
+![records](https://user-images.githubusercontent.com/85924566/128641761-11a1ac80-0055-4488-9c2b-10cd2b29e3f3.png)
+
+- Analyze your sleep in Track your sleep
+
+![Screenshot (74)](https://user-images.githubusercontent.com/85924566/128641275-fdc56ccd-009c-4357-a690-b46cc78e039c.png)
 
 - Unable to sleep
 
@@ -100,21 +116,3 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 
 
    
-- Record page in Track your sleep
-**It is compulsory to fill all the entries in Track your nap form**
-
-![records](https://user-images.githubusercontent.com/85924566/128641761-11a1ac80-0055-4488-9c2b-10cd2b29e3f3.png)
-
-- Analyze your sleep in Track your sleep
-
-![Screenshot (74)](https://user-images.githubusercontent.com/85924566/128641275-fdc56ccd-009c-4357-a690-b46cc78e039c.png)
-
-- Login page
-
-**Once you logout then to visit website again  you don't need to fill signup form again and again, just fill entries in login in form.**
-**It will automatically filled by system if you have saved password in the beginning .**
-
-
-![login](https://user-images.githubusercontent.com/85924566/128641788-8fa5ecb6-aba5-49bc-abbd-cba536697ee9.png)
-
-
