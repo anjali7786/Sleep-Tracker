@@ -20,23 +20,11 @@ body{
     height: 430px;
     margin: auto;
 }
-.box a{
-    text-decoration: none;
-    color: white;
-}
-.content{
-   width: 700px;
-   height: 350px;
-   margin: 60px auto;
-}
 .box:hover{
     width: 820px;
     height: 470px;
     margin:   auto;
     /* z-index: 2; */
-}
-.box:hover a{
-    color:white;
 }
 .box:hover img{
     width: 820px;
@@ -44,6 +32,135 @@ body{
     margin: auto;
 }
 .box:hover div{
-   margin: 30px auto;
-   font-size: 1.3rem;
+    margin: 30px auto;
+    font-size: 1.3rem;
+ }
+ .content{
+    width: 700px;
+    height: 350px;
+    margin: 60px auto;
+ }
+@media only screen and (max-width: 850px){
+    .box{
+        /* position: relative; */
+        width: 680px;
+        height: 380px;
+        margin: 20px auto;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        /* z-index: -1; */
+    }
+    .box img{
+        width: 680px;
+        height: 380px;
+        margin: auto;
+    }
+    .content{
+        width: 630px;
+        height: 300px;
+        margin: 40px auto;
+        font-size: 0.9rem;
+     }
+     .box:hover div{
+        margin: 25px auto;
+        font-size: 1.1rem;
+     }
+    .box:hover{
+        width: 710px;
+        height: 400px;
+        margin:   auto;
+        /* z-index: 2; */
+    }
+    .box:hover img{
+        width: 710px;
+        height: 400px;
+        margin: auto;
+    }
 }
+@media only screen and (max-width: 720px){
+    .box{
+        /* position: relative; */
+        width: 500px;
+        height: 300px;
+        margin: 20px auto;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        /* z-index: -1; */
+    }
+    .box img{
+        width: 500px;
+        height: 300px;
+        margin: auto;
+    }
+    .content{
+        width: 450px;
+        height: 280px;
+        margin: 30px auto;
+        font-size:0.8rem;
+     }
+     .box:hover div{
+        margin: 18px auto;
+        font-size: 1rem;
+     }
+    .box:hover{
+        width: 530px;
+        height: 320px;
+        margin:   auto;
+        /* z-index: 2; */
+    }
+    .box:hover img{
+        width: 530px;
+        height: 320px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 550px){
+    .box{
+        /* position: relative; */
+        width: 400px;
+        height: 250px;
+        margin: 20px auto;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        /* z-index: -1; */
+    }
+    .box img{
+        width: 400px;
+        height: 250px;
+        margin: auto;
+    }
+    .content{
+        width: 350px;
+        height: 180px;
+        margin: 20px auto;
+        font-size: 0.7rem;
+     }
+     .box:hover div{
+        margin: 10px auto;
+        font-size: 0.9rem;
+     }
+    .box:hover{
+        width: 430px;
+        height: 270px;
+        margin:   auto;
+        /* z-index: 2; */
+    }
+    .box:hover img{
+        width: 430px;
+        height: 270px;
+        margin: auto;
+    }
+}
+.box a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.box:hover a{
+    color:white;
+}
+
