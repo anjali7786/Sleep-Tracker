@@ -92,7 +92,7 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 - Record page in Track your sleep
 **It is compulsory to fill all the entries in Track your nap form**
 
-![records](https://user-images.githubusercontent.com/85924566/128641761-11a1ac80-0055-4488-9c2b-10cd2b29e3f3.png)
+![Screenshot (404)](https://user-images.githubusercontent.com/85924566/128654833-10a14dba-0d71-4d32-8c2e-2d2770855973.png)
 
 - Analyze your sleep in Track your sleep
 
