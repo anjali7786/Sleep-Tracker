@@ -73,8 +73,6 @@ def signup():
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
-        # age = request.form['age']
-        # mobile = request.form['mobile']
         cpassword = request.form['cpassword']
         if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(fullname) > 0 and len(
                 cpassword) > 0:
