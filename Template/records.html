@@ -37,13 +37,6 @@
           <a class="nav-link fs-5 fw-normal" href="/boostyourself">Boost Yourself</a>
         </li>
       </ul>
-
-      <!-- <form class="d-flex mx-2">
-        <a href="/signup" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button" aria-disabled="true">Sign
-          Up</a>
-        <a href="/login" class="btn auth btn-outline-light mx-2 fs-5" tabindex="-1" role="button"
-          aria-disabled="true">Login</a>
-      </form> -->
       <form action="{{ url_for('logout') }}" method="POST">
         <input type="submit" value="Log out" class="btn auth  text-white btn-block mx-2 fs-5 btn-dark">
       </form>
@@ -57,30 +50,22 @@
     <h2 class="text-decoration-underline pt-3">Track your nap</h2>
 
     <form action="{{ url_for('records') }}" method="POST">
-      <!-- <div class="row mb-3 mx-1 pt-3">
-        <label for="appt" class="bt px-0 fs-5">Username:</label>
-        
-          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-       
-      </div> -->
       <div class="time row mb-1 mx-1 pt-3">
         <label for="appt" class="bt px-0 pt-4 fs-5">Enter date:</label>
         &nbsp;
-        <!-- <input type="time" class="appt2" name="wake1" min="00:00" max="23:59" required> -->
+        
         <input type="date" class="form-control" id="date" name="date" placeholder="date">
-        <!-- <button type="submit" class="btn btn-primary savetime">Save</button> -->
+        
       </div>
     <div class="time">
       <label for="appt" class="bt pt-4 fs-5">Enter your Bedtime:</label>
       &nbsp;
       <input type="time" class="form-control" id="bedtime" name="bedtime" placeholder="bedtime">
-      <!-- <input type="time" class="appt1" name="bed1" min="00:00" max="23:59" required> -->
-      <!-- <button type="submit" class="btn btn-primary" class="savetime">Save</button> -->
     </div>
     <div class="time">
       <label for="appt" class="bt pt-4 fs-5">Enter Wakeup time:</label>
       &nbsp;
-      <!-- <input type="time" class="appt2" name="wake1" min="00:00" max="23:59" required> -->
+      
       <input type="time" class="form-control" id="wakeuptime" name="wakeuptime" placeholder="wakeuptime">
       <button type="submit" class="btn btn-primary savetime">Save</button>
     </div>
@@ -88,26 +73,5 @@
   
 </form>
 </div>
-<!-- <div class="right">
-  
-  <h2 class="text-decoration-underline pt-3">Night sleep</h2>
-  <form action="{{ url_for('records') }}" method="post">
-      <div class="time">
-        <label for="appt" class="bt fs-5">Enter your Bedtime:</label>
-        &nbsp;
-        <input type="time" class="appt1" name="bedt1" min="00:00" max="23:59" required>
-        <input type="submit" value="Save" class="btn text-white btn-block btn-primary">
-      </div>
-      <div class="time">
-        <label for="appt" class="wt fs-5">Enter Wakeup time:</label>
-        &nbsp;
-        <input type="time" class="appt2" name="waket1" min="00:00" max="23:59" required>
-        <button type="submit" class="btn btn-primary" class="savetime">Save</button>
-      </div>
-    </br>
-
-
-  </form>
-  </div> -->
 </div>
 {% endblock %}
