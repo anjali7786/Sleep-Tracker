@@ -112,7 +112,8 @@ git clone https://github.com/anjali7786/Sleep-Tracker.git
 
 **To zoom the image of Boostyourself click on image**
 
-![Screenshot (389)](https://user-images.githubusercontent.com/85924566/128630410-cf2eecf2-68a5-4f86-b3a3-fec3b833352f.png)
+![Screenshot (402)](https://user-images.githubusercontent.com/85924566/128654446-13772bad-df21-4987-b4f5-09b71ed7723c.png)
+
 
 
    
